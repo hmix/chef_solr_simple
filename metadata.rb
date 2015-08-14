@@ -1,0 +1,7 @@
+name 'solr_simple'
+maintainer 'Michael Haas'
+maintainer_email 'hmi@linux.com'
+license 'apachev2'
+description 'Installs/Configures solr_simple'
+long_description 'Installs/Configures solr_simple'
+version '0.1.0'
