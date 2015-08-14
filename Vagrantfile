@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   # If this value is a shorthand to a box in Vagrant Cloud then
   # config.vm.box_url doesn't need to be specified.
-  config.vm.box = 'chef/ubuntu-14.04'
+  config.vm.box = 'chef/centos-6.6'
 
 
   # Assign this VM to a host-only network IP, allowing you to access it
@@ -76,11 +76,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
-        server_repl_password: 'replpass'
-      }
+       mysql: {
+         server_root_password: 'rootpass',
+         server_debian_password: 'debpass',
+         server_repl_password: 'replpass'
+       }
     }
 
     chef.run_list = [
